@@ -150,7 +150,7 @@ function createBoard(){
 
 function checkMatch(){
     const cards = document.querySelectorAll('img');
-    if(cardChoosen[0] == cardChoosen[1]){
+    if(cardChoosen[0] == cardChoosen[1] && cardChoosenIds[0] != cardChoosenIds[1]){
         cards[cardChoosenIds[0]].setAttribute('src','img/white.jpg');
         cards[cardChoosenIds[1]].setAttribute('src','img/white.jpg');
         cards[cardChoosenIds[0]].removeEventListener('click', flipCard);
